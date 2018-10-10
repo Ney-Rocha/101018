@@ -1,0 +1,15 @@
+/* folha de estilo grupo lms */
+
+.safe-area{
+  width: 100%;
+  height: auto;
+}
+
+.safe-area>img{
+ width: 100%;
+ height: auto;
+}
+
+.container-safe-area{
+  margin: none;
+}
