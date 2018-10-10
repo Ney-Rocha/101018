@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Principal</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">LMS</a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                
+                <li class="active"><a href="curso.html">Curso <span class="sr-only">(current)</span></a></li>
+                
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="aluno.html">Aluno</a></li>
+                    <li><a href="professor.html">Professor</a></li>
+                    <li><a href="coordenador.html">Coordenador</a></li>
+                    <li><a href="usuario.html">Usuário</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conteúdo<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="disciplina.html">Disciplina</a></li>
+                      <li><a href="disciplinaOfertada.html">Disciplina Ofertada</a></li>
+                    </ul>
+                  </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tarefas<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="Atividade.html">Atividade</a></li>
+                    <li><a href="atividadeVinculada.html">Atividade Vinculada</a></li>
+                    <li><a href="entrega.html">Entrega</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="mensagem.html"> Mensagem</a></li>
+
+                <li><a href="#"> Login</a></li>
+              </ul>              
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </header>
+      <section id="">
+          <h1 class="text-center">Cadastro de Professor</h1>
+          <div class="container">
+            <div class="col-md-12">
+              <form action="#">
+                <div class="form-group col-md-12">
+                  <label for="nomeCompletoprofessor" class="label-control">Nome Completo</label>
+                  <input type="text" name="nomeCompletoprofessor" class="form-control">
+                </div>
+  
+                <div class="form-group col-md-12">
+                  <label for="emailAlunoProfessor" class="label-control">E-mail</label>
+                  <input type="mail" name="emailAlunoProfessor" class="form-control">
+                </div>
+  
+                <div class="form-group col-md-6">
+                  <label for="telefoneAlunoProfesor" class="label-control">Celular</label>
+                  <input type="phone" name="telefoneAlunoProfesor" class="form-control">
+                </div>
+  
+                <div class="form-group col-md-6">
+                  <label for="apelidoProfessor" class="label-control">Apelido</label>
+                  <input type="phone" name="apelidoProfessor" class="form-control">
+                </div>
+      
+                <div class="form-group text-center col-md-12">
+                  <button type="submit" class="btn btn-info btn-lg">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+    </main>
+    
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
