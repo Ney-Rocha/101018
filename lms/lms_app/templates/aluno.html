@@ -1,0 +1,42 @@
+      {% extends 'aluno.html' %}
+      {% block conteudo %}
+      <section id="">
+        <h1 class="text-center">Cadastro de Aluno</h1>
+        <div class="container">
+          <div class="col-md-12">
+            <form action="#">
+              <div class="form-group col-md-12">
+                <label for="nomeCompleto" class="label-control">Nome Completo</label>
+                <input type="text" name="nomeCompleto" class="form-control">
+              </div>
+
+              <div class="form-group col-md-12">
+                <label for="emailAluno" class="label-control">E-mail</label>
+                <input type="mail" name="emailAluno" class="form-control">
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="telefoneAluno" class="label-control">Celular</label>
+                <input type="phone" name="telefoneAluno" class="form-control">
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="RaAluno" class="label-control">RA</label>
+                <input type="phone" name="RaAluno" class="form-control">
+              </div>
+
+              <div class="form-group col-md-12">
+                <label for="RaAluno" class="label-control">Foto</label>
+                <input type="file" name="RaAluno" class="form-control">
+              </div>
+    
+              
+    
+              <div class="form-group text-center col-md-12">
+                <button type="submit" class="btn btn-info btn-lg">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+{% endblock conteudo %}
