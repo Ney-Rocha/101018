@@ -23,6 +23,9 @@ urlpatterns = [
 ]
 urlpatterns = [
     url(r'^$', views.Home, name="Home"),
+    url(r'^cadastrarUsuario/$', views.CadastrarUsuario, name='CadastrarAluno'),
+    url(r'^cursodisciplina/$', views.CursoDisciplina, name='CursoDisciplina'),
+    url(r'^consultarcadastro/$', views.ConsultarCadastro, name='ConsultarCadastro'),
     url(r'^aluno/$', views.Aluno, name='Aluno'),
     url(r'^atividade/$', views.Atividade, name='Atividade'),
     url(r'^atividadevinculada/$', views.Atividade, name='AtividadeVinculada'),

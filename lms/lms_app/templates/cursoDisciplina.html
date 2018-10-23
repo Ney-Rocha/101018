@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+{% load static %}
+    <section class="container-fluid">
+        <h1 class="text-center mt-5">Selecione a operação que deseja</h1>
+        <div class="row text-center mt-5">
+            
+            <div class="col">
+                <div class="w-100">
+                    <a href="../curso" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-curso.png" %}" />
+                        <h4>Cadastrar cursos</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="w-100">
+                    <a href="../disciplinaofertada" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-vincular.png" %}" />
+                        <h4>Vincular curso e disciplina</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="w-100">
+                    <a href="../disciplina" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-disciplina.png" %}" />
+                        <h4>Cadastrar disciplina</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="md-4"></div>
+            <div class="md-4"></div>
+            <div class="md-4"></div>
+        </div>
+    </section>
+{% endblock conteudo %}

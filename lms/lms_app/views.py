@@ -3,7 +3,16 @@ from django.shortcuts import render
 # Create your views here.
 
 def Home(request):
-    return render(request, 'index.html', {})
+    return render(request, 'login.html', {})
+
+def CadastrarUsuario(request):
+    return render(request, 'cadastrarUsuario.html', {})
+
+def CursoDisciplina(request):
+    return render(request, 'cursoDisciplina.html', {})
+
+def ConsultarCadastro(request):
+    return render(request, 'consultarCadastro.html', {})
 
 def Aluno(request):
     return render(request, 'aluno.html', {})

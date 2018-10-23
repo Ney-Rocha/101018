@@ -7,14 +7,16 @@
     <title>Principal</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <link href="{% static "lms_app/css/bootstrap/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "lms_app/css/estilo.css" %}" rel="stylesheet" />
   </head>
   <body>
     <main>
-    <header>
+    <header><!-- 
         <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            
             <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -25,7 +27,7 @@
             <a class="navbar-brand" href="../">LMS</a>
             </div>
         
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 
@@ -62,8 +64,34 @@
 
                 <li><a href="#"> Login</a></li>
             </ul>              
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            </div>
+        </div>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../">LMS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="../">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="../cadastrarUsuario">Cadastrar Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="../cursodisciplina">Cursos e Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="../consultarcadastro">Consultar Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="../mensagem">Enviar Mensagem</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     {% block conteudo %}
@@ -73,9 +101,11 @@
         
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     <!-- Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/datapicker/bootstrap-datepicker.js"></script>
-    <script src="js/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="{% static "lms_app/js/bootstrap/bootstrap.min.js" %}"></script>
+    <script src="{% static "lms_app/js/datapicker/bootstrap-datepicker.js" %}"></script>
+    <script src="{% static "lms_app/js/touchspin/jquery.bootstrap-touchspin.min.js" %}"></script>
+    <script src="{% static "lms_app/js/index.js" %}"></script>
     </body>
 </html>

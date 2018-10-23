@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+{% load static %}
+    <section class="container-fluid">
+        <h1 class="text-center mt-5">Selecione o tipo de consulta que deseja</h1>
+        <div class="row text-center mt-5">
+            
+            <div class="col">
+                <div class="w-100">
+                    <a href="../aluno" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-alunos.png" %}" />
+                        <h4>Consultar aluno</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="w-100">
+                    <a href="../professor" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-professor.png" %}" />
+                        <h4>Consultar professor</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="w-100">
+                    <a href="../coordenador" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-coordenador.png" %}" />
+                        <h4>Consultar coordenador</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-5">
+            <div class="col">
+                <div class="w-100">
+                    <a href="../curso" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-curso.png" %}" />
+                        <h4>Consultar cursos</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="w-100">
+                    <a href="../disciplinaofertada" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-vincular.png" %}" />
+                        <h4>Consultar Vinculo de curso e disciplina</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="w-100">
+                    <a href="../disciplina" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-disciplina.png" %}" />
+                        <h4>Consultar disciplina</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock conteudo %}

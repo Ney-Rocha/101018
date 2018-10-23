@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+{% load static %}
+    <section class="container-fluid">
+        <h1 class="text-center mt-5">Selecione o tipo de usuario que deseja cadastrar</h1>
+        <div class="row text-center mt-5">
+            
+            <div class="col">
+                <div class="w-100">
+                    <a href="../aluno" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-alunos.png" %}" />
+                        <h4>Cadastrar aluno</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="w-100">
+                    <a href="../professor" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-professor.png" %}" />
+                        <h4>Cadastrar professor</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="w-100">
+                    <a href="../coordenador" class="nav-link">
+                        <img src="{% static "lms_app/img/icone-coordenador.png" %}" />
+                        <h4>Cadastrar coordenador</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="md-4"></div>
+            <div class="md-4"></div>
+            <div class="md-4"></div>
+        </div>
+    </section>
+{% endblock conteudo %}
