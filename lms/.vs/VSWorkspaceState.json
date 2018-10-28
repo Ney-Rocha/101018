@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\lms_app",
+    "\\lms_app\\Models",
+    "\\lms_app\\static\\lms_app\\js",
+    "\\lms_app\\templates"
+  ],
+  "SelectedNode": "\\lms_app\\Models\\aluno.py",
+  "PreviewInSolutionExplorer": false
+}
