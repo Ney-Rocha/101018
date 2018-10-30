@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from lms_app.models import Aluno
+from lms_app.forms import AlunoForms
 
 # Create your views here.
 

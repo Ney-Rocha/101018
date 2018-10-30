@@ -1,105 +1,108 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-          <section id="">
-              <h1 class="text-center">Cadastro Disciplina</h1>
-              <div class="container">
-                <div class="col-md-12">
-                  <form action="#">
-                    <div class="form-group col-md-12">
-                      <label for="nomeDisciplina" class="label-control">Nome Disciplina</label>
-                      <input type="text" name="nomeDisciplina" class="form-control">
-                    </div>
-          
-                    <div class="ibox-content col-md-12">
-                      <div class="form-group" id="data_1">
-                          <label class="font-noraml">Data</label>
-                          <div class="input-group date">
-                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
-                          </div>
-                      </div>          
-                    </div>
-          
-                    <div class="form-group col-md-12">
-                      <label for="status" class="label-control">Status</label>          
-                      <select class="form-control" name="status">
-                          <option value="">Selecione</option>
-                          <option value="Aberta">Aberta</option>
-                          <option value="Fechada">Fechada</option>
-                      </select>
-                    </div>
-          
-          
-                    <div class="form-group col-md-12">
-                      <label for="planoEnsino" class="label-control">Plano de Ensino</label>
-                      <textarea name="planoEnsino" class="form-control" id="planoEnsino" cols="10" rows="3"></textarea>
-                    </div>
-          
-                    <div class="form-group col-md-12">
-                      <label for="cargaHoraria" class="label-control">Carga Horaria</label>          
-                      <select class="form-control" name="cargaHoraria">
-                          <option value="">Selecione</option>
-                          <option value="40horas">40 horas</option>
-                          <option value="80horas">80 horas</option>
-                      </select>
-                    </div>
-          
-                    <div class="form-group col-md-12">
-                      <label for="competencias" class="label-control">Competências</label>
-                      <textarea name="competencias" class="form-control" id="planoEnsino" cols="10" rows="3"></textarea>
-                    </div>
-          
-                    <div class="form-group col-md-12">
-                      <label for="habilidades" class="label-control">habilidades</label>
-                      <textarea name="habilidades" class="form-control" id="planoEnsino" cols="10" rows="3"></textarea>
-                    </div>
-          
-                    <div class="form-group col-md-12">
-                      <label for="Ementa" class="label-control">Ementa</label>
-                      <textarea name="Ementa" class="form-control" id="planoEnsino" cols="10" rows="3"></textarea>
-                    </div>
-          
-                    <div class="form-group col-md-12">
-                      <label for="conteudoProgramatico" class="label-control">Conteúdo Programatico</label>
-                      <textarea name="conteudoProgramatico" class="form-control" id="planoEnsino" cols="10" rows="3"></textarea>
-                    </div>
-          
-                    <div class="form-group col-md-12">
-                      <label for="bibliografiaBasica" class="label-control">Bibliografia Básica</label>
-                      <textarea name="bibliografiaBasica" class="form-control" id="planoEnsino" cols="10" rows="3"></textarea>
-                    </div>
-          
-                    <div class="form-group col-md-12">
-                      <label for="bibliotecaComplementar" class="label-control">Biblioteca Complementar</label>
-                      <textarea name="bibliotecaComplementar" class="form-control" id="planoEnsino" cols="10" rows="3"></textarea>
-                    </div>
-                    
-                    <div class="col-md-6">
-                      <label for="percentualPratico" class="label-control">Percentual Prático</label>
-                      <input class="touchspin2" type="text" value="55" name="demo2">
-                    </div>
-            
-                    <div class="col-md-6">
-                      <label for="percentualTeorico" class="label-control">Percentual Teórico</label>
-            
-                      <input class="touchspin2" type="text" value="55" name="demo2">
-                    </div>          
-          
-                    <div class="form-group col-md-12">
-                      <label for="cargaHoraria" class="label-control">Carga Horaria</label>          
-                      <select class="form-control" name="cargaHoraria">
-                          <option value="">Selecione</option>
-                          <option value="joao">Joao</option>
-                          <option value="maria">Maria</option>
-                      </select>
-                    </div>
-                    <div class="form-group text-center col-md-12">
-                      <button type="submit" class="btn btn-info btn-lg">Enviar</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-          </section>
-          {% endblock conteudo %}
+
+  <section class='container-fluid'>
+    <form class='formDisciplina' method='POST' action='#'>
+        {% csrf_token %}
+        <div class='container w-50 mt-4'>
+          <div class='row'>
+            <div class='col-12 text-center'>
+              <h3>Cadastrar Disciplina</h3>
+            </div>
+          </div>
+          <div class='form-row mt-4'>
+            <div class='col-md-8 col-sm-12 col-12 form-group'>
+              <label for='nomeDisciplina'>Nome da disciplina</label>
+              <input type='text' name='nomeDisciplina' class='form-control' placeholder='Nome da Disciplina' required>
+            </div>
+            <div class='col-md-4 col-sm-12 col-12 form-group'>
+                <label for='dataDisciplina'>Data</label>
+                <input type='date' name='dataDisciplina' class='form-control' required>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-6 col-sm-12 col-12 form-group'>
+              <label for='statusDisciplina'>Status</label>
+              <select class='form-control' name='statusDisciplina' required>
+                <option value="" >Selecione</option>
+                <option value="Aberta" >Aberta</option>
+                <option value="Fechada" >Fechada</option>
+              </select>
+            </div>
+            <div class='col-md-6 col-sm-12 col-12 form-group'>
+                <label for='cargaHorariaDisciplina'>Carga Horaria</label>
+                <select class='form-control' required>
+                  <option value=''>Selecione</option>
+                  <option value='40'>40</option>
+                  <option value='80'>80</option>
+                </select>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-12 form-group'>
+              <label for='planoEnsinoDisciplina'>Plano de Ensino</label>
+              <textarea class='form-control' cols='10' rows='3' name='planoEnsinoDisciplina' placeholder='Plano de Ensino' required></textarea>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-12 form-group'>
+              <label for='competenciasDisciplina'>Competências</label>
+              <textarea class='form-control' cols='10' rows='3' name='competenciasDisciplina' placeholder='Competências' required></textarea>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-12 form-group'>
+              <label for='habilidadesDisciplina'>Habilidades</label>
+              <textarea class='form-control' cols='10' rows='3' name='habilidadesDisciplina' placeholder='Habilidades' required></textarea>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-12 form-group'>
+              <label for='ementaDisciplina'>Ementa</label>
+              <textarea class='form-control' cols='10' rows='3' name='ementaDisciplina' placeholder='Ementa' required></textarea>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-12 form-group'>
+              <label for='conteudoProgramaticoDisciplina'>Conteúdo Programatico</label>
+              <textarea class='form-control' cols='10' rows='3' name='conteudoProgramaticoDisciplina' placeholder='Conteúdo Programatico' required></textarea>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-12 form-group'>
+              <label for='bibliografiaBasicaDisciplina'>Bibliografia Básica</label>
+              <textarea class='form-control' cols='10' rows='3' name='bibliografiaBasicaDisciplina' placeholder='Bibliografia Básica' required></textarea>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-12 form-group'>
+              <label for='bibliografiaComplementarDisciplina'>Bibliografia Complementar</label>
+              <textarea class='form-control' cols='10' rows='3' name='bibliografiaComplementarDisciplina' placeholder='Bibliografia Complementar' required></textarea>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-6 form-group'>
+              <label for='percentualPraticoDisciplina'>Percentual Prático</label>
+              <input type='number'class='form-control percentualPraticoDisciplina' name='percentualPraticoDisciplina' min='0' step='10' value='0' required>
+              <small class="text-muted">O percentual Pratico e Teorico devem somar 100</small>
+            </div>
+            <div class='col-md-6 form-group'>
+              <label for='percentualTeoricoDisciplina'>Percentual Teorico</label>
+              <input type='number'class='form-control percentualTeoricoDisciplina' name='percentualTeoricoDisciplina' min='0' step='10' value='0' required>
+              <span class="erroPercentual" name="erroPercentual"></span>
+            </div>
+          </div>
+          <div class='form-row'>
+            <div class='col-md-12 form-group text-center'>
+              <button type='submit' class='btn btn-info btn-lg'>Cadastrar</button>
+            </div>
+          </div>
+        </div>
+    </form>
+    
+  </section>
+
+    {% endblock conteudo %}
     <script>
       $(document).ready(function(){
 

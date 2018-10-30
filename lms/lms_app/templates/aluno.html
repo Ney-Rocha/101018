@@ -1,56 +1,111 @@
-      {% extends 'base.html' %}
-      {% block conteudo %}
-      <section id="">
-        <h1 class="text-center">Cadastro de Aluno</h1>
-        <div class="container">
-          <div class="col-md-12">
-            <form action="#">
-              <div class="form-group col-md-12">
-                <label for="nomeCompleto" class="label-control">Nome Completo</label>
-                <input type="text" name="nomeCompleto" class="form-control">
+{% extends 'base.html' %}
+{% block conteudo %}
+    <section class="container-fluid">
+      <h3 class="text-center mt-3">Cadastrar aluno</h3>
+      <form class="formAluno" method="POST" action="#">
+        {% csrf_token %}
+        <div class='container w-50'>
+          <div class="form-row mt-4">
+              <div class="col-4 form-group">
+                <hr>
               </div>
-
-              <div class="form-group col-md-12">
-                <label for="emailAluno" class="label-control">E-mail</label>
-                <input type="mail" name="emailAluno" class="form-control">
+              <div class="col-4 form-group">
+                <h4 class="text-center">Dados Pessoais</h4>
               </div>
-
-              <div class="form-group col-md-6">
-                <label for="telefoneAluno" class="label-control">Celular</label>
-                <input type="phone" name="telefoneAluno" class="form-control">
+              <div class="col-4 form-group">
+                <hr>
               </div>
-
-              <div class="form-group col-md-6">
-                <label for="RaAluno" class="label-control">RA</label>
-                <input type="phone" name="RaAluno" class="form-control">
+            </div>
+            <!-- Row -->
+            <div class="form-row">
+              <div class="col-8 form-group">
+                <label for="nomeAluno">Nome completo</label>
+                <input type="text" class="form-control" name="nomeAluno" placeholder="Nome completo" required />
+                <span class="invalid-feedback formErro"></span>
               </div>
-
-              <div class="form-group col-md-6">
-                  <label for="nascimentoAluno" class="label-control">Data de nascimento</label>
-                  <input type="text" name="nascimentoAluno" class="form-control">
+              <div class="col-4 form-group">
+                  <label for="rmAluno">RA</label>
+                  <input type="text" class="form-control" name="raAluno" placeholder="RA" required />
+                  <span class="invalid-feedback formErro"></span>
+                </div>
+            </div>
+            <!-- Row -->
+            <div class="form-row">
+              <div class="col-8 form-group">
+                <label for="emailAluno">E-mail</label>
+                <input type="email" class="form-control" name="emailAluno" placeholder="E-mail" required />
+                <span class="invalid-feedback formErro"></span>
               </div>
-
-              <div class="form-group col-md-6">
-                  <label for="sexoAluno" class="label-control">Sexo</label>
-                  <select class="form-control" name="sexoAluno">
-                      <option value="">Selecione</option>
-                      <option value="Masculino">Masculino</option>
-                      <option value="Feminino">Feminino</option>
-                  </select>
+              <div class="col-4 form-group">
+                <label for="telefoneAluno">Telefone</label>
+                <input type="tel" class="form-control" id="telefoneAluno" name="telefone" placeholder="Telefone" required  />
+                <span class="invalid-feedback formErro"></span>
               </div>
-
-              <div class="form-group col-md-12">
-                <label for="RaAluno" class="label-control">Foto</label>
-                <input type="file" name="RaAluno" class="form-control">
+            </div>
+            <!-- Row -->
+            <div class="form-row">
+              <div class="col-6 form-group">
+                <label for="nascimentoAluno">Data de nascimento</label>
+                <input type="date" class="form-control" id="nascimentoAluno" name="nascimentoAluno" placeholder="Data de nascimento" required />
+                <span class="invalid-feedback formErro"></span>
               </div>
-    
-              
-    
-              <div class="form-group text-center col-md-12">
-                <button type="submit" class="btn btn-info btn-lg">Enviar</button>
+              <div class="col-6 form-group">
+                <label for="sexoAluno">Sexo</label>
+                <select class="form-control" name="sexoAluno" required>
+                    <option value="">Selecione</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                </select>
+                <span class="invalid-feedback formErro"></span>
               </div>
-            </form>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label for="fotoAluno">Foto</label>
+                <input type="file" class="form-control" name="fotoAluno" required />
+                <span class="invalid-feedback formErro"></span>
+              </div>
+            </div>
+            <!-- Row -->
+            <div class="form-row mt-4">
+              <div class="col-4 form-group">
+                <hr>
+              </div>
+              <div class="col-4 form-group">
+                <h4 class="text-center">Usuario</h4>
+              </div>
+              <div class="col-4 form-group">
+                <hr>
+              </div>
+            </div>
+            <!-- Row --> 
+            <div class="form-row">
+              <div class="col form-group">
+                <label for="usuarioAluno">Nome de usuario</label>
+                <input type="text" class="form-control" name="usuarioAluno" placeholder="Usuario" required />
+                <span class="invalid-feedback formErro"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <label for="senhaAluno">Senha</label>
+                <input type="password" class="form-control" name="senha" placeholder="Senha" required />
+                <small class="text-muted">A senha deve ter no minimo 8 caracteres</small>
+                <span class="invalid-feedback formErro"></span>
+              </div>
+              <div class="col form-group">
+                <label for="confirmarSenhaAluno">Confirme sua senha</label>
+                <input type="password" class="form-control" name="confirmarSenhaAluno" placeholder="Confirme sua senha" required />
+                <span class="invalid-feedback formErro"></span>
+              </div>
+            </div>   
+            <div class="form-row">
+              <div class="col form-group">
+                <button type="submit" class="btn btn-info btn-lg">Cadastrar</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+      </form>
+    </section>
+
 {% endblock conteudo %}
